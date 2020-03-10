@@ -72,9 +72,6 @@ ctaImage.src = 'img/header-img.png';
 
 
 
-//  Do T
-
-
 
 let features = document.querySelector('h4:nth-of-type(1)');
 features.id = 'features';
@@ -86,9 +83,7 @@ featuresParag.textContent = 'Features content elementum magna eros, ac posuere e
 
 
 
-// let about = = document.querySelector('h4:nth-of-type(2)');
 let about = document.querySelector("div.top-content > div:nth-child(2) > h4")
-console.log(about)
 about.id = 'about';
 about.textContent = 'ABOUT';
 
@@ -97,30 +92,77 @@ let aboutParag = document.querySelector("div.top-content div:nth-child(2) p")
 aboutParag.id = 'aboutPara';
 aboutParag.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
-// const topContent = document.getElementsByClass('top-content');
-// topContent.style.flex;
-
 
 const textContent = document.querySelectorAll('.text-content');
 
 let middleImg = document.getElementById('middle-img');
 middleImg.src = 'img/mid-page-accent.jpg'
 
-console.log(textContent)
 
-textContent.forEach((card, i) => {
-  if(i <= 1){
-    card.style.background = 'red';
-  }
-  if(i > 1){
-    card.style.background = 'blue';
-}
-})
 
-// const navServices= document.querySelector('a:nth-of-type(1)');
-// navServices.textContent = 'Services';
 
-// const about = document.querySelector('h4');
-// about.id = 'about';
-// const aboutID = document.getElementById('about');
-// about.textContent = 'ABOUT';
+// textContent.forEach((card, i) => {
+//   if(i <= 1){
+//
+//   }
+//   if(i > 1){
+//
+// }
+// });
+
+
+let services = document.querySelector("body > div > section.main-content > div.bottom-content > div:nth-child(1) > h4")
+services.id = 'services';
+services.textContent = 'SERVICES';
+
+
+let servicesParag = document.querySelector("body > div > section.main-content > div.bottom-content > div:nth-child(1) > p")
+servicesParag.id = 'servicesPara';
+servicesParag.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+
+let product = document.querySelector("div.bottom-content > div:nth-child(2) > h4")
+product.id = 'product';
+product.textContent = 'PRODUCT';
+
+
+let productParag = document.querySelector("div.bottom-content div:nth-child(2) p")
+productParag.id = 'productPara';
+productParag.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+let vision = document.querySelector("div.bottom-content > div:nth-child(3) > h4")
+vision.id = 'vision';
+vision.textContent = 'VISION';
+
+
+let visionParag = document.querySelector("div.bottom-content div:nth-child(3) p")
+visionParag.id = 'visionPara';
+visionParag.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+const contactHeading = document.querySelector("section.contact > h4")
+contactHeading.id = 'contact';
+contactHeading.textContent = 'CONTACT';
+
+const contactParag = document.querySelector("section.contact > p:nth-child(2)")
+contactParag.innerHTML = '123 Way 456 Street<br>Somewhere, USA<br><br>1(888) 888-8888<br><br>sales@greatidea.io'
+
+
+let navigation = document.querySelectorAll('a');
+// let navLinks = Array.from(navigation);
+
+let intro = document.querySelector('nav');
+console.log(intro)
+
+let newNavItem = document.createElement('a');
+newNavItem.textContent = 'Appended';
+
+let newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Prepended';
+
+intro.prepend(newNavItem2);
+intro.appendChild(newNavItem);
+
+
+
+
+navigation.forEach(link => link.style.color ='green');
